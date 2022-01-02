@@ -1,10 +1,7 @@
-
-
-
 /*
 DOCUMENT OBJECT MODEL
 tree of nodes/elements created by the browser
-javascript can be used to read write     to the DOM
+javascript can be used to read write to the DOM
 Object oriented representation
 
 document-> root element<html> -> element head -> element body
@@ -12,8 +9,7 @@ head-> elements title, text
 body -> element i.e. h1 -> text 'my header'
 
 not using jquery makes the application faster
-(and to select elements from the dom is like using
-  a sledge hammer to kill a mosquito))
+
 */
 
 let val;
@@ -21,9 +17,6 @@ let val;
 
 val = document;
 
-//html collection
-
-// get the length of all the elements in the dom
 
 val = document.head
 val = document.body
@@ -50,12 +43,6 @@ val = document.images
 val = document.scripts
 val = document.scripts[2].getAttribute('src')
 
-
-
-
-
-
-//node lists
 
 
 
