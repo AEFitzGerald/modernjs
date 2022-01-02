@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "fullName": "Judy Love",
+    "company": "Friendly Forest",
+    "phoneNumber": "888-222-5555"
+  },
+  {
+    "id": 1,
+    "fullName": "Brandie Carlile",
+    "company": "XO Wines",
+    "phoneNumber": "555-555-5555"
+  },
+  {
+    "id": 1,
+    "fullName": "Lil Nas X",
+    "company": "Philantropic BadAss",
+    "phoneNumber": "111-111-1111"
+  }
+]
