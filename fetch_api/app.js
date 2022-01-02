@@ -2,21 +2,27 @@ document.getElementById('button1').addEventListener('click', getText)
 document.getElementById('button2').addEventListener('click', getJSON)
 document.getElementById('button3').addEventListener('click', getExternal)
 
+//"If there is an http error, it will not fire off .catch automatically. 
+//You have to check the response and throw an error yourself."
+
+function handleErrors(res) {
+  if (!res.ok) throw new Error(res.error);
+  return res;
+}
+
+
 //get local text file data
-function getText(){
   fetch('test.txt')
-  .then(function(res){
-    //we want to return the text method that is in prototype
-    //if json than res.json
-    return res.text()
-  })
-  .then(function(data) {
-    console.log(data)
-    document.getElementById('output').innerHTML = data
-  })
-  .catch(function(err){
-    console.log(err)
-  })
+  //we want to return the text method that is in prototype
+  //if json than res.json
+  .then(res=> res.text())
+  .then(handleErrors)
+  .then(res => 
+      console.log(res.text())
+      document.getElementById('output').innerHTML = data
+   )
+  .catch(err=>
+    console.log(err))
 }
 
 //get local json data
