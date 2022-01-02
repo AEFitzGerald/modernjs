@@ -12,48 +12,49 @@ function handleErrors(res) {
 
 
 //get local text file data
+
   fetch('test.txt')
   //we want to return the text method that is in prototype
   //if json than res.json
   .then(res=> res.text())
   .then(handleErrors)
-  .then(res => 
-      console.log(res.text())
+  .then(data => {
+      console.log(data)
       document.getElementById('output').innerHTML = data
-   )
-  .catch(err=>
-    console.log(err))
+  })
+  .catch(err => console.log(err))
 }
+
 
 //get local json data
 
 function getJSON(){
   fetch('posts.json')
-    .then(function(res){
-      return res.json()
-    })
-    .then(function(data) {
+    .then(res=> res.json())
+    .then(handleErrors)
+    .then(data {
       console.log(data)
       let output = ''
-      data.forEach(function(post) {
+      data.forEach(post => {
         output += `<li>${post.title}</li>`
       })
       document.getElementById('output').innerHTML = output 
     })
+    .catch(err => console.log(err))
 }
 
 //get from external api
 function getExternal(){
   fetch('https://api.github.com/users')
-    .then(function(res){
-      return res.json()
-    })
-    .then(function(data) {
+    .then(res=> res.json())
+    .then(handleErrors)
+    .then(data => {
       console.log(data)
       let output = ''
-      data.forEach(function(user) {
+      data.forEach(user => {
         output += `<li>${user.login}</li>`
       })
       document.getElementById('output').innerHTML = output 
-    })
+     })
+    .catch(err => console.log(err))    
 }
