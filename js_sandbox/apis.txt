@@ -1,0 +1,25 @@
+REST
+representational state transfer
+
+architectural style for designing networked applications
+
+relies on stateless, client-server protocol, almost always http
+
+treats server objects as resources that can be created or destroyed
+
+can be used by virtually any programming language
+
+all apis have their own rules and structure
+
+
+GET, retrieve data from a specified resource
+POST, submit data to be processed to a specified resource
+PUT, update a specified resource
+DELETE, delete a specified resource
+
+
+HEAD, same as get but does not return a body, returns header
+
+OPTIONS, returns the supported http methods
+
+PATCH, update partial resources
